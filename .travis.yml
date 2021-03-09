@@ -6,3 +6,7 @@ jdk:
   - openjdk11
 #script:
 #  - ./mvnw --no-transfer-progress --batch-mode -Pimage -Dfabric8.mode=kubernetes install -am -Dbuild-selection -Pbuild-common,build-extension,build-integration,build-connector,build-meta,build-server,build-s2i,build-ui-react
+before_install:
+  - sudo apt update
+  - sudo apt install ant
+  - ant -version
